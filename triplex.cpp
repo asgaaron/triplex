@@ -27,7 +27,6 @@ bool PlayGame(int Difficulty)
 {
     int GuessA, GuessB, GuessC, GuessSum, GuessProduct;
 
-    srand(time(NULL));
     const int FirstCode = RandomCode(Difficulty), SecondCode = RandomCode(Difficulty), ThirdCode = RandomCode(Difficulty);
     const int CodeSum = FirstCode + SecondCode + ThirdCode;
     const int CodeProduct = FirstCode * SecondCode * ThirdCode;
@@ -58,6 +57,7 @@ bool PlayGame(int Difficulty)
 
 int main()
 {
+    srand(time(NULL));
     cout << ArtLibrary::Cutscenes::Introduction();
     Pause();
 
